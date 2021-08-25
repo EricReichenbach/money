@@ -320,7 +320,7 @@ class Money implements Arrayable, Jsonable, JsonSerializable, Renderable
      * @param string $method
      * @param array  $arguments
      *
-     * @return \Akaunting\Money\Money
+     * @return static
      */
     public static function __callStatic($method, array $arguments)
     {
@@ -561,7 +561,7 @@ class Money implements Arrayable, Jsonable, JsonSerializable, Renderable
      * @throws \InvalidArgumentException
      * @throws \OutOfBoundsException
      *
-     * @return \Akaunting\Money\Money
+     * @return static
      */
     public function convert(Currency $currency, $ratio, $rounding_mode = self::ROUND_HALF_UP)
     {
@@ -578,7 +578,7 @@ class Money implements Arrayable, Jsonable, JsonSerializable, Renderable
      *
      * @throws \InvalidArgumentException
      *
-     * @return \Akaunting\Money\Money
+     * @return static
      */
     public function add($addend, $rounding_mode = self::ROUND_HALF_UP)
     {
@@ -607,7 +607,7 @@ class Money implements Arrayable, Jsonable, JsonSerializable, Renderable
      *
      * @throws \InvalidArgumentException
      *
-     * @return \Akaunting\Money\Money
+     * @return static
      */
     public function subtract($subtrahend, $rounding_mode = self::ROUND_HALF_UP)
     {
@@ -637,7 +637,7 @@ class Money implements Arrayable, Jsonable, JsonSerializable, Renderable
      * @throws \InvalidArgumentException
      * @throws \OutOfBoundsException
      *
-     * @return \Akaunting\Money\Money
+     * @return static
      */
     public function multiply($multiplier, $rounding_mode = self::ROUND_HALF_UP)
     {
@@ -663,7 +663,7 @@ class Money implements Arrayable, Jsonable, JsonSerializable, Renderable
      * @throws \InvalidArgumentException
      * @throws \OutOfBoundsException
      *
-     * @return \Akaunting\Money\Money
+     * @return static
      */
     public function divide($divisor, $rounding_mode = self::ROUND_HALF_UP)
     {
